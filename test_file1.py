@@ -15,7 +15,8 @@ def test_sub(a, b, output, expected):
 
 
 @pytest.mark.parametrize('x, output, expected,', [
-    ([6, 1, 5, 2, 10, 3, 4], (1, 10), True),  # output should be carried out as tuples
+# output should be 2carried out as tuples
+    ([6, 1, 5, 2, 10, 3, 4], (1, 10), True),
     ([6, 1, 5, 2, True, 10, 3, 4], False, True),
     ([6, 1, 5, 2, 'a', 10, 3, 4], False, True),
     ([61, 1, 15, 2, 100, 10, 3, 4], (100, 1), False),
