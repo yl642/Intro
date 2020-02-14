@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>TestDataConversion module &#8212; TSH Test 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to TSH Test’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-TestDataConversion">
+<span id="testdataconversion-module"></span><h1>TestDataConversion module<a class="headerlink" href="#module-TestDataConversion" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="TestDataConversion.count_data">
+<code class="sig-prename descclassname">TestDataConversion.</code><code class="sig-name descname">count_data</code><span class="sig-paren">(</span><em class="sig-param">data_list</em><span class="sig-paren">)</span><a class="headerlink" href="#TestDataConversion.count_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count patient size from given data list.</p>
+<p>This function counts patient number from input data list according
+to element starting with ‘TSH’, used to count patient size, where
+each patient gets Thyroid Stimulating Hormone (TSH) test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_list</strong> (<em>list</em>) – data list containing element ‘TSH, #, # …’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the calculated patient size</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="TestDataConversion.diagnosis_data">
+<code class="sig-prename descclassname">TestDataConversion.</code><code class="sig-name descname">diagnosis_data</code><span class="sig-paren">(</span><em class="sig-param">data_list</em><span class="sig-paren">)</span><a class="headerlink" href="#TestDataConversion.diagnosis_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Diagnose Thyroid Stimulating Hormone level from given data list.</p>
+<p>This function reads in a list containing Thyroid Stimulating Hormone (TSH)
+levels and insert corresponding TSH diagnosis labeled as hypothyroidism,
+hyperthyroidism or normal thyroid function before the elemnt containing
+TSH levels. Any number greater than 4.0 will be labeled as hypothyroidism.
+any number less than 1.0 hyperthyroidism, any number in between (inclusive)
+normal thyroid function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_list</strong> (<em>list</em>) – data list containing element ‘TSH, #, # …’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>same data list as input w/ diagnosis before each element</dt><dd><p>formatted ‘TSH, #, # …’</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="TestDataConversion.dictization_data">
+<code class="sig-prename descclassname">TestDataConversion.</code><code class="sig-name descname">dictization_data</code><span class="sig-paren">(</span><em class="sig-param">data_list</em><span class="sig-paren">)</span><a class="headerlink" href="#TestDataConversion.dictization_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert given data list to data dictionary.</p>
+<p>This function takes in a single patient data list, and convert it to a
+dictionary for convenience of future data storage. Input data list should
+contain and only contain elements ‘Full Name’, ‘Age’, ‘Gender’,
+‘Diagnosis’, and ‘TSH Level’ in order. Returned dictionary contains keys
+and corresponding values of ‘First Name’, ‘Last Name’, ‘Age’, ‘Gender’,
+‘Diagnosis’, and ‘TSH’, where datatype of value of ‘Age’ is int, ‘TSH’
+int list, others str.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_list</strong> (<em>list</em>) – data list containing specified element as above</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Converted dictionary with same elements as in input data list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="TestDataConversion.interface">
+<code class="sig-prename descclassname">TestDataConversion.</code><code class="sig-name descname">interface</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TestDataConversion.interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrate all functionality in a user interface.</p>
+<p>This fucntion integrates complete functionality in a user interface.
+On the console, this interface will ask users to input the filename that
+they want to process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="TestDataConversion.read_data">
+<code class="sig-prename descclassname">TestDataConversion.</code><code class="sig-name descname">read_data</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#TestDataConversion.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read in patient info from given filename.</p>
+<p>This function reads in patient info before recognizing ‘END’
+from user-specified filename and returns as a list.
+Every single readline occupies one element of returned list,
+and trailing or leading spaces will be ignored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – filename w/ extension</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>read-in data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="TestDataConversion.save_data">
+<code class="sig-prename descclassname">TestDataConversion.</code><code class="sig-name descname">save_data</code><span class="sig-paren">(</span><em class="sig-param">dict</em><span class="sig-paren">)</span><a class="headerlink" href="#TestDataConversion.save_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save given data dictionary in a .json file.</p>
+<p>This function reads in a dictionary and save it in a .json file, whose
+filename is specified by values of ‘First Name’ and ‘Last Name’ in input
+dictionary, formatted as ‘FirstName-LastName.json’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dict</strong> (<em>dict</em>) – data dictionary containing elements ‘First Name’
+and ‘Last Name’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">TSH Test</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TestDataConversion module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to TSH Test’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Yangpei Liu.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/TestDataConversion.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
